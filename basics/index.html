@@ -11,8 +11,18 @@
         <h1>Ma Liste des Tâches</h1>
         <div class="input-section">
             <input type="text" placeholder="entrer une tâche" id="taskInput">
+            <select id="priorityInput">
+                <option value="low">Basse</option>
+                <option value="medium">Moyenne</option>
+                <option value="high">Haute</option>
+            </select>
             <button onclick="addTask()">Ajouter</button>
         </div>
+        <!-- section pour le bouton de filtrage  -->
+         <div class="filter-section">
+            <button onclick="filterTasks('all')">Toutes</button>
+            <button onclick="filterTasks('pending')">Non terminer</button>
+         </div>
         <ul id="taskList"></ul>
     </div>
     <script src="script.js"></script>
